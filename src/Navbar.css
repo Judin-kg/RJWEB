@@ -5,17 +5,12 @@
   box-sizing: border-box;
 }
 
-/* Prevent scroll when menu active */
-body.no-scroll {
-  overflow: hidden;
-}
-
-/* Navbar */
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 40px;
+  padding: 16px 60px;
   width: 90%;
   max-width: 1200px;
   margin: 20px auto;
@@ -59,6 +54,7 @@ body.no-scroll {
   font-size: 0.75rem;
   color: #c084fc;
   font-weight: 400;
+  letter-spacing: 0.5px;
   margin-top: 2px;
 }
 
@@ -77,6 +73,8 @@ body.no-scroll {
   font-weight: 500;
   position: relative;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-links li a::after {
@@ -115,6 +113,7 @@ body.no-scroll {
   letter-spacing: 0.5px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
 }
 
 .contact-btn:hover {
@@ -179,22 +178,21 @@ body.no-scroll {
 /* Mobile Menu */
 .nav-links.active {
   position: fixed;
-  top: 0;
+  top: 80px;
   right: 0;
   width: 70%;
-  max-width: 280px;
+  max-width: 300px;
   height: 100%;
   background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(10px);
   flex-direction: column;
   gap: 30px;
-  padding: 100px 20px;
-  display: flex;
+  padding: 40px 20px;
   z-index: 999;
+  display: flex;
   transition: all 0.3s ease;
 }
 
-/* Overlay */
 .overlay {
   display: none;
   position: fixed;
@@ -211,26 +209,12 @@ body.no-scroll {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .nav-links {
     display: none;
   }
 
   .hamburger {
     display: flex;
-    position: relative; /* ensures it's inside navbar */
-  }
-
-  .navbar {
-    padding: 16px 20px;
-    width: 95%;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 12px;
-  }
-
-  .contact-btn {
-    display: none; /* optional: hide contact button if needed */
   }
 }
- 
