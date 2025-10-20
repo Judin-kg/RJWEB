@@ -16,20 +16,19 @@
 }
 
 .services-heading span {
-  color: #a020f0; /* violet accent */
+  color: #a020f0;
 }
 
-/* 🟪 4×2 GRID LAYOUT */
+/* Grid container */
 .services-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  grid-template-rows: repeat(2, auto); /* 2 rows */
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px 30px;
   justify-content: center;
   align-items: stretch;
 }
 
-/* CARD STYLE */
+/* Card styles */
 .service-card {
   background: #111;
   border-radius: 20px;
@@ -49,7 +48,6 @@
   border-color: #a020f0;
 }
 
-/* ICON */
 .service-icon {
   font-size: 3.5rem;
   color: #a020f0;
@@ -61,7 +59,6 @@
   color: #fff;
 }
 
-/* TEXT */
 .service-card h3 {
   font-size: 1.4rem;
   margin-bottom: 12px;
@@ -77,7 +74,7 @@
 
 /* ------------------- RESPONSIVE DESIGN ------------------- */
 
-/* Large screens (4 columns) */
+/* Large screens (4→3 columns) */
 @media (max-width: 1200px) {
   .services-container {
     grid-template-columns: repeat(3, 1fr);
@@ -85,7 +82,7 @@
   }
 }
 
-/* Tablet (2 columns) */
+/* Tablets (2 columns) */
 @media (max-width: 1024px) {
   .services-container {
     grid-template-columns: repeat(2, 1fr);
@@ -109,10 +106,10 @@
   }
 }
 
-/* Small tablets & large phones (1-2 columns) */
+/* Small tablets & large phones (1 column) */
 @media (max-width: 850px) {
   .services-container {
-    grid-template-columns: 1fr; /* Single column for narrow screens */
+    grid-template-columns: 1fr;
     gap: 25px 15px;
   }
 
@@ -142,7 +139,7 @@
   }
 }
 
-/* Mobile devices */
+/* Mobile devices (small phones) */
 @media (max-width: 480px) {
   .services-section {
     padding: 50px 15px;
@@ -151,6 +148,10 @@
   .services-heading {
     font-size: 2rem;
     margin-bottom: 40px;
+  }
+
+  .services-container {
+    gap: 20px 10px;
   }
 
   .service-card {
@@ -168,7 +169,7 @@
 
   .service-card p {
     font-size: 0.85rem;
-    line-height: 1.5;
+    line-height: 1.4;
     max-width: 100%;
   }
 }

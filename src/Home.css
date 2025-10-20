@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 .home-section {
@@ -62,9 +61,8 @@
 }
 
 .sub-title {
-  font-size: 1.2rem;
-  color: #c6c6c6;
   font-size: 1.5rem;
+  color: #c6c6c6;
 }
 
 /* Three transparent square buttons */
@@ -109,7 +107,7 @@
   box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
 }
 
-/* Responsive */
+/* ===== Tablet & Medium Screens (≤768px) ===== */
 @media (max-width: 768px) {
   .main-title {
     font-size: 2rem;
@@ -120,5 +118,57 @@
   .button-group {
     flex-direction: column;
     gap: 12px;
+  }
+  .square-btn {
+    padding: 16px 20px;
+    font-size: 0.9rem;
+  }
+  .explore-btn {
+    padding: 12px 30px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Mobile Phones (≤480px) ===== */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.6rem;
+  }
+  .sub-title {
+    font-size: 0.9rem;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .square-btn {
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    width: 80%;
+  }
+  .explore-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    width: 70%;
+  }
+}
+
+/* ===== Very Small Screens (≤360px) ===== */
+@media (max-width: 360px) {
+  .main-title {
+    font-size: 1.4rem;
+  }
+  .sub-title {
+    font-size: 0.8rem;
+  }
+  .square-btn {
+    padding: 12px 15px;
+    font-size: 0.8rem;
+    width: 90%;
+  }
+  .explore-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    width: 80%;
   }
 }

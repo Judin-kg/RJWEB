@@ -75,7 +75,7 @@ body, html {
   box-shadow: 0 30px 50px rgba(0,0,0,0.7);
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries */
 
 /* Laptops & small desktops */
 @media (max-width: 1024px) {
@@ -124,10 +124,28 @@ body, html {
   }
   .slider-container {
     height: 250px;
-    flex-direction: column;
   }
   .slider-item {
     width: 140px;
     height: 200px;
+  }
+}
+
+/* Very Small Phones (≤360px) */
+@media (max-width: 360px) {
+  .explore-heading {
+    font-size: 1.3rem;
+  }
+  .explore-subheading {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+  .slider-container {
+    height: 200px;
+  }
+  .slider-item {
+    width: 120px;
+    height: 180px;
+    border-radius: 15px;
   }
 }

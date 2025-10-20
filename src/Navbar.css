@@ -5,12 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: transparent;
-  font-family: "Poppins", sans-serif;
-}
-
-/* Floating Navbar Container */
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -26,14 +21,13 @@ body {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 25px rgba(129, 51, 255, 0.25);
   z-index: 1000;
   gap: 20px;
 }
 
-/* Logo Section */
+/* Logo & Brand */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -64,7 +58,7 @@ body {
   margin-top: 2px;
 }
 
-/* Navigation Links */
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 32px;
@@ -79,12 +73,10 @@ body {
   font-weight: 500;
   position: relative;
   transition: all 0.3s ease;
-  line-height: 1;
   display: inline-flex;
   align-items: center;
 }
 
-/* Active + Hover underline animation */
 .nav-links li a::after {
   content: "";
   position: absolute;
@@ -130,7 +122,7 @@ body {
   background: linear-gradient(135deg, #b46bff, #7e22ce);
 }
 
-/* Shine Animation */
+/* Shine effect */
 .contact-btn .shine {
   position: absolute;
   top: 0;
@@ -151,117 +143,78 @@ body {
 }
 
 @keyframes shine {
-  0% {
-    left: -70%;
-  }
-  100% {
-    left: 130%;
-  }
+  0% { left: -70%; }
+  100% { left: 130%; }
 }
 
-/* ------------------- Responsive ------------------- */
-
-/* Laptops & small desktops */
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 14px 40px;
-    gap: 15px;
-  }
-  .nav-links {
-    gap: 24px;
-  }
-  .logo {
-    width: 38px;
-    height: 38px;
-  }
-  .brand {
-    font-size: 1.2rem;
-  }
-  .brand span {
-    font-size: 0.7rem;
-  }
-  .nav-links li a {
-    font-size: 0.95rem;
-  }
-  .contact-btn {
-    padding: 0 20px;
-    height: 38px;
-    font-size: 0.9rem;
-  }
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
 }
 
-/* Tablets */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 12px 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .nav-links {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-  .logo {
-    width: 34px;
-    height: 34px;
-  }
-  .brand {
-    font-size: 1.1rem;
-  }
-  .brand span {
-    font-size: 0.65rem;
-  }
-  .nav-links li a {
-    font-size: 0.9rem;
-  }
-  .contact-btn {
-    padding: 0 18px;
-    height: 36px;
-    font-size: 0.85rem;
-  }
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* Mobile devices */
+/* Toggle animation */
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.nav-links.active {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 20px;
+  z-index: 999;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 10px 15px;
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 15px;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .navbar-left {
-    gap: 8px;
-  }
-  .logo {
-    width: 30px;
-    height: 30px;
-  }
-  .brand {
-    font-size: 1rem;
-  }
-  .brand span {
-    font-size: 0.6rem;
-  }
   .nav-links {
-    width: 100%;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
+    display: none;
   }
-  .nav-links li a {
-    font-size: 0.85rem;
-  }
-  .contact-btn {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 0.85rem;
-    height: 38px;
-    justify-content: center;
+
+  .hamburger {
+    display: flex;
   }
 }

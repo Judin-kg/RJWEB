@@ -50,6 +50,8 @@
   margin-top: 15px;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 
 .social-icons a {
@@ -72,16 +74,97 @@
   font-size: 0.85rem;
 }
 
+/* ===== Tablet (≤768px) ===== */
 @media (max-width: 768px) {
   .footer {
-    padding: 40px 15px;
+    padding: 50px 15px 25px;
   }
 
   .footer-logo {
     font-size: 1.3rem;
+    text-align: center;
   }
 
   .footer-section h3 {
     font-size: 1rem;
+  }
+
+  .footer-container {
+    gap: 30px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* ===== Mobile (≤480px) ===== */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: 1.2rem;
+  }
+
+  .footer-section h3 {
+    font-size: 0.95rem;
+  }
+
+  .footer-section p,
+  .footer-section li,
+  .footer-section a {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    margin-top: 30px;
+  }
+}
+
+/* ===== Very Small Screens (≤360px) ===== */
+@media (max-width: 360px) {
+  .footer {
+    padding: 30px 10px 15px;
+  }
+
+  .footer-logo {
+    font-size: 1.1rem;
+  }
+
+  .footer-section h3 {
+    font-size: 0.9rem;
+  }
+
+  .footer-section p,
+  .footer-section li,
+  .footer-section a {
+    font-size: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
   }
 }

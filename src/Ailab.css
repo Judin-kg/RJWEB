@@ -1,27 +1,19 @@
+/* =============================
+   AI LAB SECTION BASE STYLES
+============================= */
 .ailab-container {
   width: 100vw;
   height: 100vh;
-  background-color: #000;
+  background: linear-gradient(180deg, #000, #0a0012);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 10px; /* added padding for small screens */
+  padding: 20px;
   box-sizing: border-box;
 }
-.ailab-heading {
-  text-align: center;
-  color: #fff;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
 
-.ailab-heading span {
-  color: #a020f0; /* Violet color for "LAB" */
-}
-
-
+/* Main 3D Container */
 .ar-tab {
   width: 900px;
   height: 650px;
@@ -30,92 +22,178 @@
   background-color: #000;
   border-radius: 16px;
   overflow: hidden;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  box-shadow: 0 0 40px rgba(160, 32, 240, 0.25);
+  padding: 20px;
+  position: relative;
 }
 
+/* =============================
+   HEADING
+============================= */
+.ailab-heading {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.ailab-heading span {
+  color: #a020f0;
+  text-shadow: 0 0 15px rgba(160, 32, 240, 0.8);
+}
+
+/* =============================
+   3D CANVAS
+============================= */
 .canvas {
   width: 100%;
-  height: 80%;
+  height: 75%;
+  border-radius: 12px;
   background-color: #000;
+  box-shadow: inset 0 0 20px rgba(160, 32, 240, 0.3);
 }
 
+/* =============================
+   BUTTONS
+============================= */
 .buttons-container {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 10px;
-  flex-wrap: wrap; /* wrap buttons on small screens */
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .buttons-container button {
-  padding: 12px 24px;
+  padding: 12px 26px;
   border: none;
   border-radius: 10px;
-  background: rgb(62, 1, 62);
+  background: linear-gradient(90deg, #520c7a, #a020f0);
   color: #fff;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: 0.3s;
-  min-width: 120px; /* ensures buttons don’t shrink too much */
+  transition: all 0.3s ease;
+  min-width: 130px;
+  box-shadow: 0 0 10px rgba(160, 32, 240, 0.5);
 }
 
 .buttons-container button:hover {
-  background: #b400ff;
+  background: linear-gradient(90deg, #b400ff, #7b00ff);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(160, 32, 240, 0.7);
 }
 
-/* Media Queries for Responsiveness */
+/* =============================
+   RESPONSIVE BREAKPOINTS
+============================= */
+
+/* Medium Laptops & Large Tablets (≤1024px) */
 @media (max-width: 1024px) {
   .ar-tab {
     width: 80%;
-    height: 80%;
+    height: 75%;
   }
-  .buttons-container button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-}
 
-@media (max-width: 768px) {
-  .ar-tab {
-    width: 95%;
-    height: 90%;
+  .ailab-heading {
+    font-size: 2.5rem;
   }
+
   .canvas {
     height: 70%;
   }
-  .buttons-container {
-    gap: 10px;
-  }
+
   .buttons-container button {
-    font-size: 13px;
-    padding: 8px 16px;
+    font-size: 15px;
+    padding: 10px 22px;
   }
 }
 
+/* Tablets & Landscape Phones (≤768px) */
+@media (max-width: 768px) {
+  .ar-tab {
+    width: 90%;
+    height: 85%;
+  }
+
+  .ailab-heading {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .canvas {
+    height: 65%;
+  }
+
+  .buttons-container {
+    gap: 12px;
+  }
+
+  .buttons-container button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+/* Phones (≤480px) */
 @media (max-width: 480px) {
+  .ailab-container {
+    padding: 10px;
+  }
+
   .ar-tab {
     width: 100%;
     height: 100%;
     border-radius: 0;
+    box-shadow: none;
+    padding: 10px;
   }
+
+  .ailab-heading {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
   .canvas {
-    height: 65%;
+    height: 60%;
+    border-radius: 6px;
   }
+
   .buttons-container {
     flex-direction: column;
-    gap: 10px;
     align-items: center;
+    gap: 12px;
   }
+
   .buttons-container button {
     width: 80%;
-    max-width: 200px;
+    max-width: 220px;
     font-size: 14px;
     padding: 10px;
+  }
+}
+
+/* Very Small Phones (≤360px) */
+@media (max-width: 360px) {
+  .ailab-heading {
+    font-size: 1.5rem;
+  }
+
+  .canvas {
+    height: 55%;
+  }
+
+  .buttons-container button {
+    width: 90%;
+    font-size: 13px;
+    padding: 9px;
   }
 }

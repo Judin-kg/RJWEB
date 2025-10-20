@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .contact-section {
-  background: rgba(0, 0, 0, 0.8); /* transparent black */
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -11,29 +11,33 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* ===== CONTAINER ===== */
 .contact-container {
   max-width: 600px;
   width: 100%;
   background: rgba(20, 20, 20, 0.6);
   padding: 40px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(160, 32, 240, 0.3);
   box-shadow: 0 0 20px rgba(160, 32, 240, 0.3);
   text-align: center;
+  transition: all 0.4s ease;
 }
 
+/* ===== HEADING ===== */
 .contact-heading {
   font-size: 2.5rem;
   margin-bottom: 30px;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .contact-heading span {
   color: #a020f0;
 }
 
-/* Form Styles */
+/* ===== FORM ===== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -50,6 +54,7 @@
   border-radius: 10px;
   outline: none;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .contact-form input:focus,
@@ -75,7 +80,7 @@
   transform: scale(1.03);
 }
 
-/* Thank You Section */
+/* ===== THANK YOU SECTION ===== */
 .thankyou-container {
   text-align: center;
   padding: 50px;
@@ -83,7 +88,7 @@
   border-radius: 20px;
   border: 1px solid rgba(160, 32, 240, 0.3);
   box-shadow: 0 0 20px rgba(160, 32, 240, 0.3);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .thankyou-logo {
@@ -98,10 +103,35 @@
   margin-bottom: 10px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* ====================== */
+/*      RESPONSIVE        */
+/* ====================== */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
   .contact-container {
-    padding: 30px 20px;
+    padding: 35px 30px;
+  }
+
+  .contact-heading {
+    font-size: 2.2rem;
+  }
+
+  .thankyou-text {
+    font-size: 1.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Tablets / Landscape Phones (≤768px) */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 30px 25px;
   }
 
   .contact-heading {
@@ -111,5 +141,58 @@
   .thankyou-text {
     font-size: 1.6rem;
   }
-  
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Phones (≤480px) */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-container {
+    padding: 25px 20px;
+    border-radius: 15px;
+  }
+
+  .contact-heading {
+    font-size: 1.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  .thankyou-container {
+    padding: 35px 20px;
+  }
+
+  .thankyou-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* Very Small Phones (≤360px) */
+@media (max-width: 360px) {
+  .contact-heading {
+    font-size: 1.6rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 0.8rem;
+  }
+
+  .thankyou-text {
+    font-size: 1.2rem;
+  }
 }

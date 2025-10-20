@@ -3,22 +3,24 @@
   background-color: #000;
   color: #fff;
   font-family: "Poppins", sans-serif;
-  padding: 80px 20px;
+  padding: 80px 5%;
+  overflow: hidden;
 }
 
+/* --- Main Layout --- */
 .about-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 135px;
+  gap: 120px;
   position: relative;
 }
 
-/* Video */
+/* --- Video Section --- */
 .about-video {
   flex: 1;
-  min-width:400px;
+  min-width: 320px;
   max-width: 500px;
   overflow: hidden;
   opacity: 0;
@@ -27,8 +29,11 @@
 }
 
 .about-video video {
-  width: 117%;
+  width: 100%;
+  height: auto;
   border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
 }
 
 .about-video.slide-left {
@@ -36,13 +41,14 @@
   transform: translateX(0);
 }
 
-/* Text content */
+/* --- Text Section --- */
 .about-text {
   flex: 1;
-  min-width: 300px;
+  min-width: 320px;
   opacity: 0;
   transform: translateX(150px);
   transition: all 1.5s ease;
+  max-width: 600px;
 }
 
 .about-text.slide-right {
@@ -50,10 +56,12 @@
   transform: translateX(0);
 }
 
-/* Heading with white + violet */
+/* --- Heading --- */
 .about-heading {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 25px;
+  text-align: left;
+  font-weight: 600;
 }
 
 .about-white {
@@ -64,25 +72,102 @@
   color: #a855f7;
 }
 
-/* Typewriter paragraph */
+/* --- Paragraph --- */
 .about-paragraph {
   font-size: 1.1rem;
   color: #ccc;
-  line-height: 1.6;
+  line-height: 1.8;
   white-space: pre-wrap;
-  min-height: 100px;
+  min-height: 120px;
+  text-align: justify;
 }
 
-/* Responsive */
+/* ===================================== */
+/*         RESPONSIVE DESIGN             */
+/* ===================================== */
+
+/* --- Tablets (≤1024px) --- */
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 80px;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- Mobile Landscape & Small Tablets (≤768px) --- */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
+    gap: 50px;
+  }
+
+  .about-heading {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .about-paragraph {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-video video {
+    border-radius: 12px;
+  }
+
+  .about-text {
+    transform: none;
+    text-align: center;
+  }
+}
+
+/* --- Small Phones (≤480px) --- */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 20px;
+  }
+
+  .about-container {
     gap: 30px;
   }
+
   .about-heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
   }
+
   .about-paragraph {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .about-video {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .about-video video {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* --- Very Small Devices (≤360px) --- */
+@media (max-width: 360px) {
+  .about-heading {
+    font-size: 1.6rem;
+  }
+
+  .about-paragraph {
+    font-size: 0.9rem;
   }
 }
