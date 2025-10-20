@@ -1,0 +1,88 @@
+.about-section {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 80px 20px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 135px;
+  position: relative;
+}
+
+/* Video */
+.about-video {
+  flex: 1;
+  min-width:400px;
+  max-width: 500px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: all 1.5s ease;
+}
+
+.about-video video {
+  width: 117%;
+  border-radius: 16px;
+}
+
+.about-video.slide-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Text content */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  opacity: 0;
+  transform: translateX(150px);
+  transition: all 1.5s ease;
+}
+
+.about-text.slide-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Heading with white + violet */
+.about-heading {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.about-white {
+  color: #fff;
+}
+
+.about-violet {
+  color: #a855f7;
+}
+
+/* Typewriter paragraph */
+.about-paragraph {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  min-height: 100px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-heading {
+    font-size: 2rem;
+  }
+  .about-paragraph {
+    font-size: 1rem;
+  }
+}

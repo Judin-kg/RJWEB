@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.services-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.services-heading {
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.services-heading span {
+  color: #a020f0; /* violet accent */
+}
+
+/* 🟪 4×2 GRID LAYOUT */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 40px 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* CARD STYLE */
+.service-card {
+  background: #111;
+  border-radius: 20px;
+  padding: 40px 25px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #222;
+  box-shadow: 0 0 10px rgba(160, 32, 240, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(160, 32, 240, 0.6);
+  border-color: #a020f0;
+}
+
+/* ICON */
+.service-icon {
+  font-size: 3.5rem;
+  color: #a020f0;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  color: #fff;
+}
+
+/* TEXT */
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 300px;
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+
+/* Large screens (4 columns) */
+@media (max-width: 1200px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px;
+  }
+}
+
+/* Tablet (2 columns) */
+@media (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+
+  .service-card {
+    padding: 35px 20px;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small tablets & large phones (1-2 columns) */
+@media (max-width: 850px) {
+  .services-container {
+    grid-template-columns: 1fr; /* Single column for narrow screens */
+    gap: 25px 15px;
+  }
+
+  .services-section {
+    padding: 70px 20px;
+  }
+
+  .services-heading {
+    font-size: 2.4rem;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .service-icon {
+    font-size: 2.8rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .services-section {
+    padding: 50px 15px;
+  }
+
+  .services-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    padding: 25px 15px;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+}

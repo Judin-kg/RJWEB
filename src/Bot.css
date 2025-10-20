@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main .image-container {
+  padding: 10px;
+  text-align: center;
+}
+
+.main .image-container .image img {
+  width: 100%;
+  max-width: 350px;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+
+.main .image-container h1 {
+  color: #00bcd4;
+  font-size: 40px;
+  margin: 10px 0;
+  transition: all 0.3s;
+}
+
+.main .image-container p {
+  color: #324042;
+  margin-bottom: 40px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.main .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  background: rgba(202, 253, 255, 0.15);
+  padding: 0 15px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+  transition: background 0.3s, box-shadow 0.3s, width 0.3s;
+}
+
+.main .input:hover {
+  background: rgba(202, 253, 255, 0.25);
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.5);
+}
+
+.main .input .talk {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #aed0d0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.main .input .talk:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #00bcd4, 0 0 30px #00bcd4 inset;
+}
+
+.main .input .content {
+  color: #00bcd4;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .main .image-container h1 {
+    font-size: 36px;
+  }
+  .main .image-container p {
+    font-size: 15px;
+  }
+  .main .input {
+    height: 45px;
+  }
+  .main .input .talk {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .main .input .content {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .image-container .image img {
+    max-width: 280px;
+  }
+  .main .image-container h1 {
+    font-size: 32px;
+  }
+  .main .image-container p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .main .input {
+    width: 95%;
+    height: 45px;
+  }
+  .main .input .talk {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .main .input .content {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .image-container .image img {
+    max-width: 220px;
+  }
+  .main .image-container h1 {
+    font-size: 28px;
+  }
+  .main .image-container p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .main .input {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  .main .input .talk {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  .main .input .content {
+    font-size: 14px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
