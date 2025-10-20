@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import logo from "../src/assets/logo.png"; // your logo path
+import logo from "../src/assets/logo.png"; // your local logo
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
+    setMenuActive(!menuActive);
+    document.body.classList.toggle("no-scroll", !menuActive);
   };
 
   return (
@@ -23,29 +20,34 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li><a href="#home" onClick={closeMenu} className="active">Home</a></li>
-          <li><a href="#aboutus" onClick={closeMenu}>About Us</a></li>
-          <li><a href="#ailab" onClick={closeMenu}>AILab</a></li>
-          <li><a href="#exploreus" onClick={closeMenu}>Explore Us</a></li>
+        <ul className={`nav-links ${menuActive ? "active" : ""}`}>
+          <li><a href="#home" className="active">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#ailab">AILab</a></li>
+          <li><a href="#exploreus">Explore Us</a></li>
           <li>
-            <a href="#contact" className="contact-btn" onClick={closeMenu}>
+            <a href="#contact" className="contact-btn">
               Contact
               <span className="shine"></span>
             </a>
           </li>
         </ul>
 
-        {/* Hamburger button */}
-        <div className={`hamburger ${menuOpen ? "toggle" : ""}`} onClick={toggleMenu}>
+        <div
+          className={`hamburger ${menuActive ? "toggle" : ""}`}
+          onClick={toggleMenu}
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
       </nav>
 
-      {/* Overlay for mobile menu */}
-      <div className={`overlay ${menuOpen ? "active" : ""}`} onClick={closeMenu}></div>
+      {/* Overlay */}
+      <div
+        className={`overlay ${menuActive ? "active" : ""}`}
+        onClick={toggleMenu}
+      ></div>
     </>
   );
 };
