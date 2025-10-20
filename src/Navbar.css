@@ -123,7 +123,7 @@ body.no-scroll {
   background: linear-gradient(135deg, #b46bff, #7e22ce);
 }
 
-/* Shine */
+/* Shine effect */
 .contact-btn .shine {
   position: absolute;
   top: 0;
@@ -165,6 +165,7 @@ body.no-scroll {
   transition: all 0.3s ease;
 }
 
+/* Toggle animation */
 .hamburger.toggle span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -181,7 +182,7 @@ body.no-scroll {
   top: 0;
   right: 0;
   width: 70%;
-  max-width: 300px;
+  max-width: 280px;
   height: 100%;
   background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(10px);
