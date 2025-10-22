@@ -39,6 +39,7 @@ import Bot from './Bot';
 import Service from "./Service";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Chatbot from "./Chatbot";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
               <ExploreSlider />
               <Service />
       <Contact />
+      <Chatbot />
       <Footer />
             </>
           } 
