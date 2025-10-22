@@ -37,7 +37,7 @@ const Chatbot = () => {
         {/* Header */}
         <div className="chatbot-header" onClick={() => setIsOpen(!isOpen)}>
           <img src={logo} alt="Bot Logo" className="bot-logo" />
-          <span className="bot-name">RJ ATLAS AI</span>
+          <span className="bot-name">Hai</span>
         </div>
 
         {/* Chat Window */}
