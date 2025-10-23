@@ -206,9 +206,11 @@
   border-radius: 10px;
 }
 
-/* --- RESPONSIVE DESIGN --- */
+/* ======================================================
+   RESPONSIVE DESIGN - OPTIMIZED
+====================================================== */
 
-/* Tablets */
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
   .chatbot-container {
     right: 15px;
@@ -217,24 +219,33 @@
 
   .chat-window {
     width: 280px;
-    height: 400px;
+    height: 380px;
+  }
+
+  .bot-logo {
+    width: 30px;
+    height: 30px;
   }
 
   .bot-name {
     font-size: 0.9rem;
   }
 
-  .bot-logo {
-    width: 32px;
-    height: 32px;
-  }
-
   .hai-text {
     font-size: 0.8rem;
   }
+
+  .message.bot p,
+  .message.user p {
+    font-size: 0.85rem;
+  }
+
+  .whatsapp-btn {
+    font-size: 0.85rem;
+  }
 }
 
-/* Phones */
+/* Phones (480px and below) */
 @media (max-width: 480px) {
   .chatbot-container {
     bottom: 10px;
@@ -247,17 +258,29 @@
   }
 
   .chat-window {
-    width: 85vw;
-    height: 60vh;
+    width: 88vw;
+    height: 65vh;
     right: 5vw;
+  }
+
+  .bot-logo {
+    width: 28px;
+    height: 28px;
   }
 
   .bot-name {
     font-size: 0.85rem;
   }
 
+  .message.bot p,
+  .message.user p {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
   .input-box input {
     font-size: 0.8rem;
+    padding: 7px 10px;
   }
 
   .input-box button {
@@ -266,16 +289,16 @@
   }
 
   .whatsapp-btn {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 9px;
   }
 }
 
-/* Ultra-small screens */
+/* Ultra-small screens (max-width: 350px) */
 @media (max-width: 350px) {
   .chat-window {
-    width: 90vw;
-    height: 65vh;
+    width: 92vw;
+    height: 60vh;
   }
 
   .bot-name {
@@ -284,5 +307,18 @@
 
   .chatbot-header {
     justify-content: center;
+  }
+
+  .message.bot p,
+  .message.user p {
+    font-size: 0.75rem;
+  }
+
+  .input-box input {
+    font-size: 0.75rem;
+  }
+
+  .input-box button {
+    font-size: 0.75rem;
   }
 }
