@@ -33,7 +33,7 @@
   height: auto;
   border-radius: 16px;
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .about-video.slide-left {

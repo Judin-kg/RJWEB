@@ -55,6 +55,7 @@
 
 import React, { useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 import logo from "../src/assets/logo.png"; // your logo path
 
 const Navbar = () => {
@@ -76,16 +77,16 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li><a href="#home" onClick={closeMenu} className="active">Home</a></li>
-          <li><a href="#aboutus" onClick={closeMenu}>About Us</a></li>
-          <li><a href="#ailab" onClick={closeMenu}>AILab</a></li>
-          <li><a href="#exploreus" onClick={closeMenu}>Explore Us</a></li>
-          <li>
-            <a href="#contact" className="contact-btn" onClick={closeMenu}>
-              Contact
+        <li><a href="#home" onClick={closeMenu}>Home</a></li>
+<li><a href="#aboutus" onClick={closeMenu}>About Us</a></li>
+<li><a href="#ailab" onClick={closeMenu}>AILab</a></li>
+<li><a href="#exploreus" onClick={closeMenu}>Explore Us</a></li>
+<li>
+  <a href="/#contact" className="contact-btn" onClick={closeMenu}>Contact</a>
+</li>
               <span className="shine"></span>
-            </a>
-          </li>
+            
+          
         </ul>
 
         {/* Hamburger Icon */}

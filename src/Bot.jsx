@@ -141,6 +141,7 @@
 
 
 import React, { useState, useEffect, useRef } from "react";
+
 import "./Bot.css";
 import avatar from "./assets/logo.png"; // Replace with your avatar path
 import gifImage from "./assets/bot.gif"; // Replace with your gif path

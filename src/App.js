@@ -40,6 +40,7 @@ import Service from "./Service";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Chatbot from "./Chatbot";
+import OurTeam from "./OurTeam";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
               <Ailab />
               <ExploreSlider />
               <Service />
+              <OurTeam />
       <Contact />
       <Chatbot />
       <Footer />
