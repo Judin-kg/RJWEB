@@ -80,3 +80,83 @@
     transform: translateX(-50%);
   }
 }
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .team-container {
+    padding: 60px 0;
+  }
+
+  .team-container h1 {
+    font-size: 2rem;
+  }
+
+  .team-card {
+    min-width: 240px;
+    padding: 15px;
+  }
+
+  .team-card img {
+    height: 240px;
+  }
+
+  .team-cards {
+    gap: 20px;
+    animation: scroll 25s linear infinite; /* slower scroll */
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .team-cards {
+    animation: none; /* stop auto scroll on small screens */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .team-card {
+    min-width: 80%;
+    max-width: 320px;
+    margin: 15px auto;
+  }
+
+  .team-card img {
+    height: 220px;
+  }
+
+  .card-info h2 {
+    font-size: 1.1rem;
+  }
+
+  .card-info p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .team-container {
+    padding: 50px 10px;
+  }
+
+  .team-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .team-card {
+    min-width: 100%;
+    padding: 10px;
+  }
+
+  .team-card img {
+    height: 200px;
+  }
+
+  .card-info h2 {
+    font-size: 1rem;
+  }
+
+  .card-info p {
+    font-size: 0.85rem;
+  }
+}
